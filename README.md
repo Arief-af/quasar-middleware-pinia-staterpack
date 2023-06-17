@@ -37,7 +37,7 @@ How to Use middleware :
 	go to some routes, add middleware: [nameRoute]
 	example : 
 ```js
-  {
+{
         meta: {
           middleware: [userMiddleware],
         },
