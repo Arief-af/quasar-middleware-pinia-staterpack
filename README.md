@@ -44,6 +44,6 @@ How to Use middleware :
         name: 'home',
         path: "/home",
         component: () => import("pages/Home.vue"),
-	}	
+}	
 
 ```
