@@ -28,7 +28,7 @@ Available Middleware :
 3. userMiddleware
    accessible only for authenticated user, who have user state  
    and isLoggedIn state is true also user.role === "user"
-4. AdminMiddleware
+4. adminMiddleware
    accessible only for authenticated user, who have user state  
    and isLoggedIn state is true also user.role === "admin"
 ```
