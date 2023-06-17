@@ -36,7 +36,7 @@ Available Middleware :
 How to Use middleware :
 	go to some routes, add middleware: [nameRoute]
 	example : 
-
+```js
     {
         meta: {
           middleware: [userMiddleware],
@@ -46,3 +46,4 @@ How to Use middleware :
         component: () => import("pages/Home.vue"),
 	}	
 
+```
