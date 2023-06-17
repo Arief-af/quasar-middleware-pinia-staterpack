@@ -1,24 +1,48 @@
-# Quasar App (middleware)
-
-A Quasar Project
+## Welcome to Quasar Pinia Middleware Starter Pack
 
 ## Install the dependencies
-```bash
-yarn
-# or
+```
 npm install
 ```
-
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
+``` 
 quasar dev
 ```
-
-
-### Build the app for production
-```bash
-quasar build
+### JSON SERVER
+Install json server from here 
+[json server ](https://www.npmjs.com/package/json-server)
+Run with 
+```
+cd src/json-server && json-server db.json
 ```
 
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+### Documentation :
+Available Middleware :
+```
+1. guestMiddleware 
+   accessible only for guest visitor, who user state is null 
+   and isLoggedIn state is false
+2. authMiddleware
+   accessible only for authenticated user, who have user state  
+   and isLoggedIn state is true
+4. userMiddleware
+   accessible only for authenticated user, who have user state  
+   and isLoggedIn state is true also user.role === "user"
+5. AdminMiddleware
+   accessible only for authenticated user, who have user state  
+   and isLoggedIn state is true also user.role === "admin"
+```
+
+How to Use middleware :
+	go to some routes, add middleware: [nameRoute]
+	example : 
+
+    {
+        meta: {
+          middleware: [userMiddleware],
+        },
+        name: 'home',
+        path: "/home",
+        component: () => import("pages/Home.vue"),
+	}	
+
